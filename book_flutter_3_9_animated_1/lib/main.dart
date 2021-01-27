@@ -33,7 +33,9 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
+      // AnimatedContainerを使用するパターン
       body: AnimatedContainer(
+        // 10秒かけて変化する
         duration: const Duration(seconds: 10),
         color: _color,
         child: const SizedBox(
@@ -41,6 +43,7 @@ class _MyHomePageState extends State<MyHomePage> {
           height: 300,
         ),
       ),
+      // ボタンを押すとSizedBoxの色が緑に変化する
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {

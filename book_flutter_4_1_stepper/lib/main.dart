@@ -33,15 +33,18 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
+      // Stepperウィジェットでステップ形式の入力
       body: Stepper(
-        type: StepperType.horizontal,
+        type: StepperType.vertical, // .horizontalだと横遷移
         currentStep: _currentStep,
         onStepTapped: (int step) => setState(() => _currentStep = step),
-        onStepContinue: _currentStep < 2 ? () => setState(() => _currentStep += 1) : null,
-        onStepCancel: _currentStep > 0 ? () => setState(() => _currentStep -= 1) : null,
+        onStepContinue:
+            _currentStep < 2 ? () => setState(() => _currentStep += 1) : null,
+        onStepCancel:
+            _currentStep > 0 ? () => setState(() => _currentStep -= 1) : null,
         steps: <Step>[
           Step(
-            title: const Text('ステップ1'),
+            title: const Text("ステップ1"),
             subtitle: const Text('subtitle'),
             content: const Text('最初のステップです。'),
             isActive: _currentStep >= 0,

@@ -23,21 +23,26 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateMixin {
+// AnimationControllerを利用する時はStateにSingleTickerProviderStateMixinをミックスインする
+class _MyHomePageState extends State<MyHomePage>
+    with SingleTickerProviderStateMixin {
   AnimationController _controller;
+
   Animation<double> _animation1;
   Animation<double> _animation2;
 
   void initState() {
     super.initState();
+    // AnimationControllerクラスをインスタンスする
     _controller = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 3),
     );
+
     _animation1 = _controller
         .drive(
           CurveTween(
-            curve: Interval(
+            curve: const Interval(
               0.0,
               0.6,
               curve: Curves.fastOutSlowIn,
@@ -100,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
         onPressed: () {
           _controller.forward();
         },
-        child: Icon(Icons.add),
+        child: const Icon(Icons.add),
       ),
     );
   }

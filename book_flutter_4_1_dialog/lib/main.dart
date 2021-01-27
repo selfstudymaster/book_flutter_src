@@ -25,70 +25,73 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Future _askUser() async {
     // SimpleDialogの場合
-//    var answer = await showDialog<int>(
-//      context: context,
-//      builder: (context) {
-//        return SimpleDialog(
-//          title: const Text('質問です'),
-//          children: <Widget>[
-//            SimpleDialogOption(
-//              child: const Text('回答1'),
-//              onPressed: () {
-//                Navigator.pop(context, 1);
-//              },
-//            ),
-//            SimpleDialogOption(
-//              child: const Text('回答2'),
-//              onPressed: () {
-//                Navigator.pop(context, 2);
-//              },
-//            ),
-//          ],
-//        );
-//      },
-//    );
-//
-//    setState(() {
-//      switch (answer) {
-//        case 1:
-//          _value = '回答1';
-//          break;
-//        case 2:
-//          _value = '回答2';
-//          break;
-//      }
-//    });
 
+/*    var answer = await showDialog<int>(
+      context: context,
+      builder: (context) {
+        return SimpleDialog(
+          title: const Text('質問です'),
+          children: <Widget>[
+            SimpleDialogOption(
+              child: const Text('回答1'),
+              onPressed: () {
+                // Navigator.pop()で戻り値を指定
+                Navigator.pop(context, 1);
+              },
+            ),
+            SimpleDialogOption(
+              child: const Text('回答2'),
+              onPressed: () {
+                Navigator.pop(context, 2);
+              },
+            ),
+          ],
+        );
+      },
+    );
+
+    setState(() {
+      switch (answer) {
+        case 1:
+          _value = '回答1';
+          break;
+        case 2:
+          _value = '回答2';
+          break;
+      }
+    });
+*/
     // AlertDialogの場合
-//    await showDialog<void>(
-//      context: context,
-//      barrierDismissible: false, // user must tap button!
-//      builder: (BuildContext context) {
-//        return AlertDialog(
-//          title: Text('タイトル'),
-//          content: SingleChildScrollView(
-//            child: ListBody(
-//              children: const <Widget>[
-//                Text('たくさん書いてもスクロールできます。'),
-//                Text('contentをSingleChildScrollViewにしてるためです。'),
-//                Text('短いダイアログだったら、Textだけで良いです。'),
-//              ],
-//            ),
-//          ),
-//          actions: <Widget>[
-//            FlatButton(
-//              child: const Text('OK'),
-//              onPressed: () {
-//                Navigator.of(context).pop();
-//              },
-//            ),
-//          ],
-//        );
-//      },
-//    );
+    await showDialog<void>(
+      context: context,
+      barrierDismissible: false, // user must tap button!
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('タイトル'),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: const <Widget>[
+                Text(
+                    'たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。たくさん書いてもスクロールできます。'),
+                Text('contentをSingleChildScrollViewにしてるためです。'),
+                Text('短いダイアログだったら、Textだけで良いです。'),
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            FlatButton(
+              child: const Text('OK'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
 
     // BottomSheetの場合
-    await showModalBottomSheet<void>(
+/*    await showModalBottomSheet<void>(
       context: context,
       builder: (BuildContext context) {
         return Column(
@@ -107,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         );
       },
-    );
+    );*/
   }
 
   @override

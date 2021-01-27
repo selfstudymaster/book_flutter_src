@@ -23,7 +23,8 @@ class MyHomePage extends StatefulWidget {
   _MyHomePageState createState() => _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateMixin {
+class _MyHomePageState extends State<MyHomePage>
+    with SingleTickerProviderStateMixin {
   AnimationController _controller;
   Animation<double> _animation;
 
@@ -54,9 +55,11 @@ class _MyHomePageState extends State<MyHomePage> with SingleTickerProviderStateM
   }
 }
 
+// AnimatedWidgetを継承したクラスを使う場合
 class AnimatedLogo extends AnimatedWidget {
   AnimatedLogo({
     Key key,
+    // Animationクラスでプロパティを変化させる
     Animation<double> animation,
   }) : super(key: key, listenable: animation);
 

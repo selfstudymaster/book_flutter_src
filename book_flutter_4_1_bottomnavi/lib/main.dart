@@ -41,11 +41,13 @@ class MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: const Text('BottomNavigationBar Sample'),
       ),
+
       body: Center(
         // (3) 保持したindexのウィジェットをbodyで表示
         child: _widgets.elementAt(_selectedIndex),
       ),
-      // (1) ここで下部のデザインを設定
+
+      // (1) ここで下部(スマホの最下部)のデザインを設定
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(

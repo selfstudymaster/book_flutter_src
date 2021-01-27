@@ -32,6 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
+      // Widget自体の切替をアニメーションする
       body: AnimatedSwitcher(
         duration: const Duration(seconds: 3),
         child: isVisible

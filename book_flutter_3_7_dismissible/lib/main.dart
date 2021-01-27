@@ -41,6 +41,9 @@ class _MyHomePageState extends State<MyHomePage> {
             background: Container(
               color: Colors.amber,
             ),
+            secondaryBackground: Container(
+              color: Colors.green,
+            ),
             onDismissed: (DismissDirection direction) {
               setState(() {
                 _items.removeAt(index);

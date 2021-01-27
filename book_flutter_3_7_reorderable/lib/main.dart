@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'ReorderableListView'),
+      home: MyHomePage(title: 'ReorderableListView 長押しで掴む'),
     );
   }
 }
@@ -34,6 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
+        // リストの項目を長押しで掴んでドラッグ&ドロップで移動(入れ替え)する
         child: ReorderableListView(
           onReorder: (oldIndex, newIndex) {
             setState(() {
