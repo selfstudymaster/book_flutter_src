@@ -6,6 +6,7 @@ import 'counter_value2.dart';
 import 'loading_value2.dart';
 import 'loading_widget2.dart';
 
+// SECTION45
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -52,6 +53,7 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
+// SECTION45
 class TopPage2_2 extends StatelessWidget {
   final CountRepository _repository;
 

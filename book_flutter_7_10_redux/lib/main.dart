@@ -9,6 +9,7 @@ import 'reducer/app_state_reducer.dart';
 import 'repository/count_repository.dart';
 import 'state/app_state.dart';
 
+// SECTION47
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {

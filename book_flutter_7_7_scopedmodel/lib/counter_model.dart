@@ -3,6 +3,7 @@ import 'package:scoped_model/scoped_model.dart';
 import 'count_repository.dart';
 import 'loading_model.dart';
 
+// SECTION-043
 // Modelを継承
 class CounterModel extends Model {
   final CountRepository _repository;

@@ -1,3 +1,4 @@
+// SECTION-043
 import 'package:flutter/material.dart';
 import 'package:scoped_model/scoped_model.dart';
 
@@ -41,7 +42,8 @@ class MyHomePage extends StatelessWidget {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => TopPage2(CountRepository(), LoadingModel()),
+                    builder: (context) =>
+                        TopPage2(CountRepository(), LoadingModel()),
                     fullscreenDialog: true,
                   ));
             },
@@ -52,6 +54,7 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
+// SECTION-043
 class TopPage2 extends StatelessWidget {
   final CountRepository _repository;
   final LoadingModel _loadingModel;
@@ -122,7 +125,8 @@ class _WidgetC extends StatelessWidget {
     return RaisedButton(
       onPressed: () {
 // 3 rebuildOnChangeをfalseにしているので取得だけ
-        ScopedModel.of<CounterModel>(context, rebuildOnChange: false).incrementCounter();
+        ScopedModel.of<CounterModel>(context, rebuildOnChange: false)
+            .incrementCounter();
       },
       child: const Icon(Icons.add),
     );
