@@ -1,4 +1,6 @@
+// SECTION32のあとにSECTION33のコード
 import 'package:book_flutter_7_1_setstate/count_repository.dart';
+import 'package:book_flutter_7_1_setstate/loading_widget0.dart';
 import 'package:flutter/material.dart';
 
 import 'loading_widget0.dart';
@@ -49,6 +51,7 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
+// SECTION33-setStateだけを使った場合
 class TopPage0 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

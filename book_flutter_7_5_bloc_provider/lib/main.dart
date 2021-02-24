@@ -5,6 +5,7 @@ import 'count_repository.dart';
 import 'counter_bloc.dart';
 import 'loading_widget1.dart';
 
+// SECTION32のコードのあとにSECTION41のコード(誌面では class TopPage3 になっている)
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -51,6 +52,7 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
+// SECTION41のコード(誌面では class TopPage3 になっている)
 class TopPage3_2 extends StatelessWidget {
   final CountRepository _repository;
 

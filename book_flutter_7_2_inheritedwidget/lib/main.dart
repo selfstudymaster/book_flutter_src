@@ -1,3 +1,4 @@
+// SECTION32のコードのあとにSECTION35のコード
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -46,6 +47,7 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
+// SECTION35-inheritedWidgetの場合
 class TopPage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -79,9 +81,13 @@ class _HomePage extends StatefulWidget {
 
   static _HomePageState of(BuildContext context, {bool rebuild = true}) {
     if (rebuild) {
-      return (context.dependOnInheritedWidgetOfExactType<_MyInheritedWidget>()).data;
+      return (context.dependOnInheritedWidgetOfExactType<_MyInheritedWidget>())
+          .data;
     }
-    return (context.getElementForInheritedWidgetOfExactType<_MyInheritedWidget>().widget as _MyInheritedWidget).data;
+    return (context
+            .getElementForInheritedWidgetOfExactType<_MyInheritedWidget>()
+            .widget as _MyInheritedWidget)
+        .data;
   }
 
 // InheritedModelの場合

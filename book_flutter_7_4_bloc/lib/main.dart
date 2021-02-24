@@ -1,3 +1,4 @@
+// SECTION32のコードのあとにSECTION37のコード
 import 'package:flutter/material.dart';
 
 import 'count_repository.dart';
@@ -50,6 +51,7 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
+// SECTION37-StreamBuilderのコード
 class TopPage3_0 extends StatefulWidget {
   @override
   _TopPageState createState() => _TopPageState();

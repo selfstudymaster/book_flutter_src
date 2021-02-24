@@ -4,6 +4,7 @@ import 'count_repository.dart';
 import 'counter_bloc.dart';
 import 'loading_widget1.dart';
 
+// SECTION32のコードのあとにSECTION37のコード
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -50,6 +51,7 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
+// SECTION40のコード
 class TopPage3_1 extends StatelessWidget {
   final CountRepository _repository;
 
@@ -91,9 +93,13 @@ class _HomePage extends StatefulWidget {
 
   static _HomePageState of(BuildContext context, {bool rebuild = true}) {
     if (rebuild) {
-      return (context.dependOnInheritedWidgetOfExactType<_MyInheritedWidget>()).data;
+      return (context.dependOnInheritedWidgetOfExactType<_MyInheritedWidget>())
+          .data;
     }
-    return (context.getElementForInheritedWidgetOfExactType<_MyInheritedWidget>().widget as _MyInheritedWidget).data;
+    return (context
+            .getElementForInheritedWidgetOfExactType<_MyInheritedWidget>()
+            .widget as _MyInheritedWidget)
+        .data;
   }
 }
 
